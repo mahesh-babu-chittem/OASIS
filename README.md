@@ -29,15 +29,10 @@ The repository also includes the implementation of the proposed:
 ```text
 OASIS
 │
-├── data
-│   ├── raw
-│   └── processed
-│       ├── original
-│       ├── crop
-│       ├── compression
-│       ├── screenshot
-│       ├── text_overlay
-│       └── noise
+├── README.md
+├── DATASET.md
+├── requirements.txt
+├── LICENSE
 │
 ├── scripts
 │   ├── baselines
@@ -50,23 +45,40 @@ OASIS
 │   │   ├── hybrid_model.py
 │   │   └── cocs.py
 │   │
-│   └── visual_analysis
-│       ├── 01_download_5k.py
-│       ├── 02_preprocess.py
-│       ├── 03_transformations.py
-│       ├── 04_create_labels.py
-│       ├── 05_generate_embeddings.py
-│       ├── 06_build_faiss.py
-│       ├── 07_query_search.py
-│       ├── 08_evaluate.py
-│       ├── 09_hybrid_query.py
-│       ├── 10_evaluate_hybrid.py
-│       ├── 11_train_fusion_model.py
-│       ├── 12_evaluate_ml_model.py
-│       ├── 13_Final_Evaluation.py
-│       ├── 14_pipeline_fixed_fusion.py
-│       └── 15_pipeline_adaptive_fusion.py
+│   ├── 01_download_5k.py
+│   ├── 02_preprocess.py
+│   ├── 03_transformations.py
+│   ├── 04_create_labels.py
+│   ├── 05_generate_embeddings.py
+│   ├── 06_build_faiss.py
+│   ├── 07_query_search.py
+│   ├── 08_evaluate.py
+│   ├── 09_hybrid_query.py
+│   ├── 10_evaluate_hybrid.py
+│   ├── 11_train_fusion_model.py
+│   ├── 12_evaluate_ml_model.py
+│   ├── 13_Final_Evaluation.py
+│   ├── 14_pipeline_fixed_fusion.py
+│   └── 15_pipeline_adaptive_fusion.py
+│
+├── visual_analysis
+│   ├── COD_OASIS(1).ipynb
+│   ├── COD_OASIS(2).ipynb
+│   ├── cod_oasis1.py
+│   └── cod_oasis2.py
+│
+└── Dataset Available via Google Drive
 ```
+
+---
+
+### Folder Description
+
+- **scripts/** contains the complete implementation of the OASIS framework, dataset generation pipeline, retrieval models, training procedures, and evaluation workflows.
+- **baselines/** contains the standalone baseline retrieval implementations.
+- **hybrid/** contains similarity fusion, hybrid retrieval, and COCS-related components.
+- **visual_analysis/** contains scripts and notebooks used for qualitative analysis, visualization, figure generation, and result interpretation presented in the manuscript.
+- **Dataset** is hosted externally via Google Drive due to GitHub storage limitations.
 
 ---
 
@@ -90,6 +102,16 @@ Total Images:
 ```
 
 Each transformed image preserves ownership identity while introducing realistic visual modifications commonly encountered in online content-sharing environments.
+
+---
+
+## Dataset Availability
+
+The complete Content Ownership Verification Dataset (30,000 images) is available at:
+
+👉 [Dataset Download](https://drive.google.com/drive/folders/14ssQlzOM0An6z37FP-U6-Hye4L5OzduR?usp=drive_link)
+
+Additional dataset details are provided in [DATASET.md](DATASET.md).
 
 ---
 
